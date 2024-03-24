@@ -7,6 +7,10 @@ app.get('/flag', (req, res) => {
   res.send('Not implemented yet')
 })
 
+app.get('/', (req, res) => {
+  res.send('<h1>WELCOME TO MY COOL APP!</h1>')
+})
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })
