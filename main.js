@@ -4,8 +4,8 @@ const app = express()
 const port = 3000
 
 app.get('/flag', (req, res) => {
-  // TODO: get flag from environment file
-  res.send('Not implemented yet')
+  flag = process.env.FLAG
+  res.send(`blu{${flag}}`)
 })
 
 app.listen(port, () => {
