@@ -1,10 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = 3000
 
 app.get('/flag', (req, res) => {
-  // TODO: get flag from environment file
-  res.send('Not implemented yet')
+  flag = process.env.FLAG
+  res.send(`blu{${flag}}`)
 })
 
 app.get('/', (req, res) => {
